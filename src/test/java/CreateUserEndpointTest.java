@@ -12,15 +12,15 @@ public class CreateUserEndpointTest {
                 RandomStringUtils.randomAlphabetic(4));
     }
     @Test
-    public void canCreateUserTest(){
+    public void createUserTest(){
 
     }
     @Test
-    public void cantCreateTheSameUserTwiceTest(){
+    public void createTheSameUserTwiceTest(){
         createUserEndpoint.createUser();
         createUserEndpoint.createUser();
-
         assertEquals(403,createUserEndpoint.getStatusCode());
         //assertEquals(403,createUserEndpoint.getStatusCode());
     }
+
 }
